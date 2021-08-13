@@ -11,10 +11,16 @@ def maximumWealth(accounts):
     wealth = []
     for customers in accounts:
         total = 0
-        for money in customers:
+        for money in customers: 
             total += money
-        wealth.append(total) 
-    return max(wealth)
+        wealth.append(total)
+
+    # Find max value in list wealth     
+    richest = wealth[0]
+    for w in wealth:    
+        if w > richest:
+            richest = w 
+    return richest
 
 if __name__ == "__main__":
     accounts = [[1,5],[7,3],[3,5]]
